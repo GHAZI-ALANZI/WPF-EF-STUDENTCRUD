@@ -13,7 +13,7 @@ namespace Crud.EF
         public StudentDBContext CreateDbContext(string[] args = null)
         {
             var options = new DbContextOptionsBuilder<StudentDBContext>();
-            options.UseSqlServer("Server=.; Database=studentcrud; Trusted_Connection=True");
+            options.UseSqlServer("Server=DESKTOP-GPMA8AR; Database=studentcrud; Trusted_Connection=True;TrustServerCertificate=True");
             return new StudentDBContext(options.Options);
         }
     }
