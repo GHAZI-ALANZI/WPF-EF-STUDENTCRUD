@@ -149,6 +149,11 @@ namespace Crud.UI
                 txtStudentID.Focus();
             }
         }
+
+        private void exit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 
 
