@@ -8,8 +8,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="icons8-ausgang-100.png" />
+    <None Remove="journal-2850091_1280.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Crud.Domain\Crud.Domain.csproj" />
     <ProjectReference Include="..\Crud.EF\Crud.EF.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="icons8-ausgang-100.png" />
+    <Resource Include="journal-2850091_1280.jpg" />
   </ItemGroup>
 
 </Project>

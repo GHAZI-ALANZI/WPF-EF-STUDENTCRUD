@@ -6,7 +6,13 @@
         xmlns:local="clr-namespace:Crud.UI"
         mc:Ignorable="d"
         Title="Student Crud Application" Height="450" Width="800" WindowStyle="None" Background="{x:Null}">
-    <Grid Background="#FF24EDD7">
+    <Grid Opacity="1">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF355351"/>
+                <GradientStop Color="#FF1CFFEF" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="25"></ColumnDefinition>
             <ColumnDefinition Width="28.261"></ColumnDefinition>
@@ -220,11 +226,10 @@
             Grid.Column="5" 
             Grid.Row="1"
             x:Name="DataGridBrand"
-            Margin="5,5,5,5" Grid.RowSpan="2" Grid.ColumnSpan="4">
+            Margin="5,5,5,5" Grid.RowSpan="2" Grid.ColumnSpan="4" BorderBrush="Black">
 
 
         </DataGrid>
-        <Image HorizontalAlignment="Left" Height="450" Grid.RowSpan="4" VerticalAlignment="Top" Width="800" Source="/images/journal-2850091_1280.jpg" Stretch="Fill" Grid.ColumnSpan="12" Panel.ZIndex="-1" Opacity="0.75"/>
         <Label Content="Student" HorizontalAlignment="Left" Margin="17,84,0,0" VerticalAlignment="Top" FontSize="72" FontWeight="Bold" Width="344" RenderTransformOrigin="0.69,-0.643" FontFamily="Script MT Bold" Grid.Column="5" Grid.Row="1" Grid.ColumnSpan="7">
             <Label.RenderTransform>
                 <TransformGroup>
@@ -235,13 +240,30 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Button x:Name="exit" Grid.Column="11" Content="Exit" HorizontalAlignment="Left" Margin="28,6,0,0" VerticalAlignment="Top" Grid.RowSpan="2" Click="exit_Click" Width="45" FontWeight="Bold" FontSize="20">
+        <Button x:Name="exit" Grid.Column="11" Content="" HorizontalAlignment="Center" Margin="0,6,0,0" VerticalAlignment="Top" Grid.RowSpan="2" Click="exit_Click" Width="50" FontWeight="Bold" FontSize="20" RenderTransformOrigin="0.5,0.5" BorderThickness="0,0,0,0">
+            <Button.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="0.85"/>
+                    <SkewTransform AngleX="14"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform X="-23" Y="-12"/>
+                </TransformGroup>
+            </Button.LayoutTransform>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.1" ScaleY="1.15"/>
+                    <SkewTransform AngleX="-17"/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
             <Button.Background>
-                <ImageBrush/>
+                <ImageBrush ImageSource="/icons8-ausgang-100.png"/>
             </Button.Background>
         </Button>
         <Image Grid.Column="10" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="100" Margin="16,12,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
-        <Image Grid.Column="10" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="31" Margin="16,6,0,0" VerticalAlignment="Top" Width="45" Source="/images/icons8-ausgang-100.png" Stretch="Fill" Grid.RowSpan="2"/>
+        <Image Grid.Column="3" HorizontalAlignment="Left" Height="100" Margin="81,48,0,0" Grid.Row="2" VerticalAlignment="Top" Width="100"/>
+        <Image HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="800" Source="/journal-2850091_1280.jpg" Stretch="Fill" Grid.RowSpan="4" Grid.ColumnSpan="12" Panel.ZIndex="-1" Opacity="0.7"/>
 
     </Grid>
 
